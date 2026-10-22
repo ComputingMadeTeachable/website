@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Computing Made Teachable | Ready-to-teach KS3 computing lessons</title>
+<meta name="description" content="Ready-to-teach KS3 computing units for busy and non-specialist teachers: slides, workbooks and teacher notes, written by a computer science teacher with 20 years in British international schools. Download Lesson 1 free.">
+<link rel="canonical" href="https://www.computingmadeteachable.com/">
+<meta property="og:title" content="Computing Made Teachable">
+<meta property="og:description" content="Ready-to-teach KS3 computing lessons. Download Lesson 1 free.">
+<meta property="og:url" content="https://www.computingmadeteachable.com/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF6EE; --paper:#FFFFFF; --sand:#F3E9DA; --line:#E7DCCB;
+    --ink:#1D2738; --ink-soft:#4A5568;
+    --coral:#E0623A; --coral-dark:#B84A26;
+    --teal:#2B7A73; --teal-soft:#E3F1EF;
+    --radius:16px; --max:1120px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:"Atkinson Hyperlegible",system-ui,sans-serif;font-size:18px;line-height:1.6}
+  img,svg{max-width:100%}
+  a{color:var(--teal)}
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.15;margin:0 0 .5em;letter-spacing:-.01em}
+  h1{font-size:clamp(2.2rem,5vw,3.6rem)}
+  h2{font-size:clamp(1.8rem,3.4vw,2.6rem)}
+  h3{font-size:1.3rem}
+  p{margin:0 0 1em}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+  section{padding:88px 0}
+  .eyebrow{font-weight:700;color:var(--coral-dark);text-transform:uppercase;letter-spacing:.1em;font-size:.8rem;margin-bottom:.8em}
+  .lede{font-size:1.2rem;color:var(--ink-soft);max-width:40em}
+  .center{text-align:center}.center .lede{margin-left:auto;margin-right:auto}
+
+  /* draft placeholders */
+  .ph{background:#FFF1A8;color:#5a4a00;padding:0 .25em;border-radius:4px;font-weight:700}
+  .draft{background:var(--ink);color:#fff;text-align:center;font-size:.85rem;padding:6px 12px}
+
+  /* buttons */
+  .btn{display:inline-block;padding:14px 26px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid transparent;transition:transform .15s,background .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:var(--coral);color:#fff}
+  .btn-primary:hover{background:var(--coral-dark)}
+  .btn-ghost{border-color:var(--ink);color:var(--ink)}
+  .btn-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:1.6em}
+
+  /* header */
+  header{position:sticky;top:0;z-index:10;background:rgba(251,246,238,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:"Fraunces",serif;font-weight:700;font-size:1.15rem;line-height:1.1}
+  .brand svg{width:40px;height:40px;flex:none}
+  .nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+  .nav ul a{color:var(--ink);text-decoration:none;font-weight:700;font-size:.95rem}
+  .nav .btn{padding:10px 20px;font-size:.95rem}
+  @media (max-width:820px){.nav ul{display:none}}
+  @media (max-width:460px){.nav .btn{display:none}}
+
+  /* hero */
+  .hero{padding:72px 0 88px}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+  @media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
+  .trust{margin-top:1.4em;font-size:.95rem;color:var(--ink-soft)}
+  .mock{position:relative;min-height:340px}
+  .sheet{position:absolute;background:var(--paper);border:1px solid var(--line);border-radius:12px;box-shadow:0 18px 40px rgba(29,39,56,.12)}
+  .sheet.workbook{width:62%;height:300px;right:0;top:0;transform:rotate(4deg);padding:22px}
+  .sheet.workbook i{display:block;height:9px;background:var(--sand);border-radius:5px;margin:12px 0}
+  .sheet.workbook b{display:block;width:40%;height:12px;background:var(--teal);border-radius:5px;margin-bottom:18px;opacity:.8}
+  .sheet.slide{width:82%;left:0;top:70px;aspect-ratio:16/10;overflow:hidden;transform:rotate(-2deg)}
+  .slide-top{background:var(--ink);color:#fff;font-size:.8rem;padding:10px 16px;font-weight:700}
+  .slide-body{padding:18px 20px}
+  .slide-body h3{font-size:1.4rem;margin-bottom:.6em}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{font-size:.75rem;font-weight:700;padding:5px 10px;border-radius:999px;background:var(--teal-soft);color:var(--teal)}
+  .chip.on{background:var(--coral);color:#fff}
+
+  /* problem */
+  .problem{background:var(--paper)}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+  @media (max-width:860px){.cards{grid-template-columns:1fr}}
+  .card{background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+  .card .icon{width:44px;height:44px;border-radius:12px;background:var(--sand);display:grid;place-items:center;margin-bottom:14px;font-size:1.3rem}
+
+  /* guide */
+  .guide-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+  @media (max-width:860px){.guide-grid{grid-template-columns:1fr}}
+  .photo{aspect-ratio:4/5;border-radius:var(--radius);background:var(--sand);display:grid;place-items:center;text-align:center;color:var(--ink-soft);border:2px dashed var(--line);padding:20px}
+  .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:28px 0}
+  .stat{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px}
+  .stat strong{display:block;font-family:"Fraunces",serif;font-size:1.6rem;color:var(--coral-dark);line-height:1.1;margin-bottom:4px}
+  .stat span{font-size:.95rem;color:var(--ink-soft)}
+  .creds{list-style:none;padding:0;margin:0}
+  .creds li{padding-left:28px;position:relative;margin-bottom:.5em}
+  .creds li::before{content:"";position:absolute;left:0;top:.45em;width:14px;height:14px;border-radius:50%;background:var(--teal)}
+
+  /* plan */
+  .plan{background:var(--ink);color:#fff}
+  .plan .eyebrow{color:#F4A27F}
+  .plan .lede{color:#C9D1DD}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:44px 0 36px;counter-reset:s}
+  @media (max-width:860px){.steps{grid-template-columns:1fr}}
+  .step{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);padding:28px;counter-increment:s}
+  .step::before{content:counter(s);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--coral);font-family:"Fraunces",serif;font-weight:700;font-size:1.3rem;margin-bottom:14px}
+  .step p{color:#C9D1DD;margin:0}
+
+  /* product */
+  .product-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+  @media (max-width:860px){.product-grid{grid-template-columns:1fr}}
+  .inside{list-style:none;padding:0;margin:1em 0 0}
+  .inside li{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line)}
+  .inside li span{flex:none;width:28px;height:28px;border-radius:8px;background:var(--teal-soft);color:var(--teal);display:grid;place-items:center;font-weight:700}
+  .tiers{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media (max-width:520px){.tiers{grid-template-columns:1fr}}
+  .tier{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:22px;position:relative}
+  .tier.best{border:2px solid var(--coral)}
+  .tier .tag{position:absolute;top:-12px;left:18px;background:var(--coral);color:#fff;font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:999px}
+  .tier h3{font-size:1.1rem;margin-bottom:.2em}
+  .tier .price{font-family:"Fraunces",serif;font-size:1.6rem;margin:.2em 0}
+  .tier p{font-size:.92rem;color:var(--ink-soft);margin:0}
+  .note{font-size:.9rem;color:var(--ink-soft);margin-top:14px}
+
+  /* transformation */
+  .change{background:var(--paper)}
+  .ba{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}
+  @media (max-width:720px){.ba{grid-template-columns:1fr}}
+  .ba div{border-radius:var(--radius);padding:28px}
+  .ba .before{background:var(--sand)}
+  .ba .after{background:var(--teal-soft)}
+  .ba ul{margin:0;padding-left:1.2em}
+  .ba li{margin-bottom:.5em}
+
+  /* lead magnet */
+  .magnet{background:var(--coral);color:#fff}
+  .magnet-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  @media (max-width:860px){.magnet-grid{grid-template-columns:1fr}}
+  .magnet .eyebrow{color:#FFE2D4}
+  form{background:var(--paper);color:var(--ink);border-radius:var(--radius);padding:28px;display:grid;gap:14px}
+  label{font-weight:700;font-size:.95rem}
+  input{width:100%;font:inherit;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;margin-top:4px}
+  input:focus{outline:3px solid var(--teal-soft);border-color:var(--teal)}
+  form .btn{border:0;cursor:pointer;font-size:1rem}
+  .small{font-size:.85rem;color:var(--ink-soft)}
+
+  /* faq */
+  details{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:12px}
+  summary{font-weight:700;cursor:pointer}
+  details p{margin:.8em 0 0;color:var(--ink-soft)}
+  .faq{max-width:780px;margin:36px auto 0}
+
+  footer{background:var(--ink);color:#C9D1DD;padding:48px 0;font-size:.95rem}
+  .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
+  footer a{color:#fff}
+  footer .brand{color:#fff}
+</style>
+</head>
+<body>
+
+<div class="draft">Draft homepage, with <span class="ph">placeholders highlighted</span> to fill or confirm</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#E0623A"/><path d="M14 10c-3 0-4 2-4 4v3.5c0 1.6-1 2.5-2.5 2.5C9 20 10 20.9 10 22.5V26c0 2 1 4 4 4M26 10c3 0 4 2 4 4v3.5c0 1.6 1 2.5 2.5 2.5-1.5 0-2.5.9-2.5 2.5V26c0 2-1 4-4 4" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.5 20.5l3 3 6-7" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Computing<br>Made Teachable
+    </a>
+    <ul>
+      <li><a href="#unit">Resources</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="btn btn-primary" href="#free-lesson">Get Lesson 1 free</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO: what you offer, how it makes life better, what to do next -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Ready-to-teach KS3 computing</p>
+        <h1>Computing lessons you can teach on Monday.</h1>
+        <p class="lede">Complete units with slides, student workbooks and teacher notes, so you can walk in confident, even if computing isn't your specialism.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#free-lesson">Download Lesson 1 free</a>
+          <a class="btn btn-ghost" href="#unit">See the Year 8 unit</a>
+        </div>
+        <p class="trust">Written by Dr Neferti Luzuriaga: 20 years teaching computing in British international schools.</p>
+      </div>
+      <div class="mock" aria-hidden="true">
+        <div class="sheet workbook"><b></b><i></i><i></i><i style="width:80%"></i><i></i><i style="width:60%"></i><i></i><i style="width:70%"></i></div>
+        <div class="sheet slide">
+          <div class="slide-top">Year 8 · Algorithms &amp; Design · Lesson 1</div>
+          <div class="slide-body">
+            <h3>Predict before you run</h3>
+            <div class="chips"><span class="chip on">Predict</span><span class="chip">Read</span><span class="chip">Investigate</span><span class="chip">Modify</span><span class="chip">Make</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM: external, internal, philosophical -->
+  <section class="problem">
+    <div class="wrap center">
+      <p class="eyebrow">Sound familiar?</p>
+      <h2>You've been handed computing. Now what?</h2>
+      <p class="lede">Lots of computing is taught by maths, science and ICT teachers who never trained in it. The scheme of work is a list of buzzwords, and the planning lands on you.</p>
+      <div class="cards" style="text-align:left">
+        <div class="card"><div class="icon">⏳</div><h3>No time to build it</h3><p>A good unit takes weeks to plan and test. You have a timetable full of other classes.</p></div>
+        <div class="card"><div class="icon">😬</div><h3>One page ahead</h3><p>Nobody wants to be caught out by "but why does it do that?" in front of thirty Year 8s.</p></div>
+        <div class="card"><div class="icon">🎯</div><h3>They deserve better</h3><p>Every student should get computing that's taught well, not stitched together from free worksheets.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDE: empathy + authority -->
+  <section id="about">
+    <div class="wrap guide-grid">
+      <div class="photo"><span><span class="ph">Photo of Nef</span><br><small>a friendly classroom shot works better than a headshot</small></span></div>
+      <div>
+        <p class="eyebrow">Your guide</p>
+        <h2>Built by a teacher who has done the hard part for you.</h2>
+        <p>Hi, I'm Nef. When I arrived at my first British school, computing meant ICT. I built the subject from a lunchtime coding club into IGCSE and A Level courses, then wrote the KS2–KS3 pathway that fed them. I've written the lessons I wish I'd been handed, tested them with real classes, and packaged them so you can teach them straight away.</p>
+        <div class="stats">
+          <div class="stat"><strong>20 years</strong><span>teaching computing, KS2 to A Level</span></div>
+          <div class="stat"><strong><span class="ph">90% A*–B</span></strong><span>IGCSE and A Level results</span></div>
+          <div class="stat"><strong>Top in the region</strong><span>Cambridge awards for her students in the Middle East and Saudi Arabia</span></div>
+          <div class="stat"><strong>Doctorate</strong><span>in Information Technology, plus BSc &amp; MSc in Computer Science</span></div>
+        </div>
+        <ul class="creds">
+          <li>UK Qualified Teacher Status (QTS)</li>
+          <li>Computer Science teacher at prestigious British international schools; has written KS3, KS4 and KS5 computer science and ICT curricula for the Edexcel and Cambridge exam boards</li>
+          <li>Two-year <span class="ph">ERIL Research Grant</span> holder, researching AI in the classroom</li>
+          <li>Former network security engineer and IT consultant, so the theory comes with real-world context</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLAN -->
+  <section class="plan">
+    <div class="wrap center">
+      <p class="eyebrow">How it works</p>
+      <h2>Three steps to a computing unit you trust.</h2>
+      <div class="steps" style="text-align:left">
+        <div class="step"><h3>Download Lesson 1</h3><p>Free: slides, workbook pages and teacher notes. No card needed.</p></div>
+        <div class="step"><h3>Teach it</h3><p>Try it with a real class and see how the lesson structure carries you.</p></div>
+        <div class="step"><h3>Get the full unit</h3><p>Buy the rest when you're ready, by lesson, half unit or whole unit.</p></div>
+      </div>
+      <a class="btn btn-primary" href="#free-lesson">Download Lesson 1 free</a>
+    </div>
+  </section>
+
+  <!-- PRODUCT -->
+  <section id="unit">
+    <div class="wrap product-grid">
+      <div>
+        <p class="eyebrow">Available now</p>
+        <h2>Year 8 Algorithms &amp; Design</h2>
+        <p>A complete 16-lesson unit that takes students from "what is an algorithm?" to designing and building their own solutions. Every lesson follows the same predictable rhythm, so students and teachers always know what comes next.</p>
+        <ul class="inside">
+          <li><span>1</span><div><strong>Slide deck for every lesson</strong>: starters, explanations and activities, ready to present.</div></li>
+          <li><span>2</span><div><strong>Two student workbooks</strong>: print them or assign them digitally.</div></li>
+          <li><span>3</span><div><strong>Teacher guide</strong>: lesson notes, answers and common misconceptions.</div></li>
+          <li><span>4</span><div><strong>PRIMM-based structure</strong>: Predict, Read, Investigate, Modify, Make. It's research-informed and easy to follow.</div></li>
+          <li><span>5</span><div><strong>Video support</strong>: a linked YouTube resource for flipped learning or revision.</div></li>
+        </ul>
+      </div>
+      <div>
+        <div class="tiers">
+          <div class="tier"><h3>Single lesson</h3><div class="price">£3.50</div><p>Try any lesson on its own.</p></div>
+          <div class="tier"><h3>Half unit</h3><div class="price">£12</div><p>Lessons 1–8: a full half term.</p></div>
+          <div class="tier best"><span class="tag">Best value</span><h3>Full unit</h3><div class="price">£20</div><p>All 16 lessons plus assessments. Just £1.25 a lesson.</p></div>
+          <div class="tier"><h3>Department licence</h3><div class="price">£49</div><p>Every teacher in your department, one price. Already bought the full unit? We'll take what you paid off.</p></div>
+        </div>
+        <p class="note">Editable PowerPoint and PDF files. Built for the English National Curriculum, and suited to British international schools. <span class="ph">Buy links: Payhip / TES</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUCCESS / TRANSFORMATION -->
+  <section class="change">
+    <div class="wrap center">
+      <p class="eyebrow">What changes</p>
+      <h2>From scrambling to confident.</h2>
+      <div class="ba" style="text-align:left">
+        <div class="before"><h3>Before</h3><ul><li>Sunday evenings lost to planning</li><li>Stitching together free resources that don't connect</li><li>Dreading the tricky questions</li></ul></div>
+        <div class="after"><h3>After</h3><ul><li>Open the slides and teach</li><li>A unit that builds lesson by lesson</li><li>Teacher notes that answer the "why?" before it's asked</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEAD MAGNET -->
+  <section class="magnet" id="free-lesson">
+    <div class="wrap magnet-grid">
+      <div>
+        <p class="eyebrow">Free download</p>
+        <h2>Try Lesson 1 with your class, free.</h2>
+        <p>You'll get the full Lesson 1: slides, workbook pages and teacher notes. See exactly how the unit works before you spend a penny.</p>
+      </div>
+      <form action="#" method="post">
+        <!-- TODO: connect to mailing-list provider -->
+        <label>First name<input type="text" name="name" autocomplete="given-name" required></label>
+        <label>School email<input type="email" name="email" autocomplete="email" required></label>
+        <button class="btn btn-primary" type="submit">Send me Lesson 1</button>
+        <p class="small">We'll email you the lesson and the occasional new resource. Unsubscribe any time. <a href="/privacy">Privacy policy</a></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="center"><p class="eyebrow">Questions</p><h2>Good to know</h2></div>
+      <div class="faq">
+        <details><summary>Do I need to be able to code?</summary><p>No. The teacher guide explains each concept and every activity has worked answers. If you can follow the slides, you can teach the lesson.</p></details>
+        <details><summary>What software do students need?</summary><p><span class="ph">Confirm: e.g. free browser-based tools only; no installs needed</span></p></details>
+        <details><summary>Can I edit the resources?</summary><p>Yes. Slides come as editable PowerPoint files, so you can adapt them to your classes and your school's style.</p></details>
+        <details><summary>Which curriculum does it follow?</summary><p>It's mapped to the KS3 English National Curriculum for computing, and works well in British international schools. <span class="ph">Mapping document?</span></p></details>
+        <details><summary>Can my whole department use it?</summary><p>Yes. A department licence covers every teacher in your department at one price. <a href="mailto:hello@computingmadeteachable.com">Email us</a> for school or group pricing.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a class="brand" href="/">Computing Made Teachable</a>
+      <p style="margin-top:.6em">Ready-to-teach computing lessons for busy teachers.</p>
+    </div>
+    <div>
+      <p><a href="mailto:hello@computingmadeteachable.com">hello@computingmadeteachable.com</a></p>
+      <p><a href="/privacy">Privacy policy</a> · © 2026 Computing Made Teachable</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
