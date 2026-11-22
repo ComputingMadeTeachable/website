@@ -130,7 +130,7 @@ page = f"""<!doctype html>
       <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#E0623A"/><path d="M14 10c-3 0-4 2-4 4v3.5c0 1.6-1 2.5-2.5 2.5C9 20 10 20.9 10 22.5V26c0 2 1 4 4 4M26 10c3 0 4 2 4 4v3.5c0 1.6 1 2.5 2.5 2.5-1.5 0-2.5.9-2.5 2.5V26c0 2-1 4-4 4" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.5 20.5l3 3 6-7" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       Computing<br>Made Teachable
     </a>
-    <a class="btn btn-primary" href="/#free-lesson">Get Lesson 1 free</a>
+    <a class="btn btn-primary" href="/#free-lesson">Get free lessons</a>
   </div>
 </header>
 
@@ -158,8 +158,8 @@ page = f"""<!doctype html>
 
     <div class="cta">
       <h2>See it for yourself</h2>
-      <p>Download Lesson 1 free and try it with your class.</p>
-      <a class="btn btn-primary" href="/#free-lesson">Get Lesson 1 free</a>
+      <p>Download one complete lesson for each year group, free, and try it with your class.</p>
+      <a class="btn btn-primary" href="/#free-lesson">Get free lessons</a>
     </div>
 
     <p class="source">Statements quoted from <a href="https://www.gov.uk/government/publications/national-curriculum-in-england-computing-programmes-of-study" rel="noopener">National curriculum in England: computing programmes of study</a> (Department for Education). Contains public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noopener">Open Government Licence v3.0</a>.</p>
